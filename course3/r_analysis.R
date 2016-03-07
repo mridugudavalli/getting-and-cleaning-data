@@ -29,8 +29,8 @@ Data <- cbind(Features, dataCombine)
 
 ###############################################################################################
 #Extracts only the measurements on the mean and standard deviation for each measurement
-FeaturesNames<-FeaturesNames$V2[grep("mean\\(\\)|std\\(\\)", FeaturesNames$V2)]
-selectedNames<-c(as.character(FeaturesNames), "subject", "activity" )
+dataFeaturesNames<-FeaturesNames$V2[grep("mean\\(\\)|std\\(\\)", FeaturesNames$V2)]
+selectedNames<-c(as.character(dataFeaturesNames), "subject", "activity" )
 Data<-subset(Data,select=selectedNames)
 str(Data)
 #############################################################################################
